@@ -6,8 +6,17 @@ class App extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      userName: 'Hackchan'
+      userName: 'Hackchan',
+      todoItems:[{action: "buy Flowers", done:false},
+                 {action: "Get Shoes", donde: false},
+                 {action: "Collect Tickets", done:true},
+                 {action: "Call Jose", done:false}],
+      newItemText: ""           
     }
+  }
+
+  updateNewtextValue = (event) => {
+    this.setState({newItemtext:event.target.value})
   }
   changeStateData = () => {
     this.setState({
