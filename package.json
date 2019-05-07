@@ -9,10 +9,12 @@
     "react-scripts": "3.0.0"
   },
   "scripts": {
+    "build-css":"postcss src/styles/css/**/*.css -d src/styles/postcss -w",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "all":"npm run build-css & react-scripts start" 
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,5 +30,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "postcss-cli": "^6.1.2",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.1.2",
+    "postcss-preset-env": "^6.6.0"
   }
 }

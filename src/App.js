@@ -18,7 +18,7 @@ class App extends React.Component{
   createNewTodo = () =>{
     
     if(!this.state.todoItems.find((item )=> {
-        return item.action == this.state.newItemText})){
+        return item.action === this.state.newItemText})){
           this.setState({
              todoItems:[...this.state.todoItems,
               {action:this.state.newItemText, donde:false}],newItemText:""
@@ -42,6 +42,44 @@ class App extends React.Component{
       userName: this.state.userName === "Hackchan" ? "Fabio":"Hackchan"
     })
   }
+
+  toggleTodo = (todo) => this.setState({todoItems: this.state.todoItems.map(item => item.action === todo.action?{...item, done:!item.done}:item)
+
+  })
+
+  todoTableRows =() =>
+     
+     this.state.todoItems.map((item) => 
+       
+      <tr key={item.action} onClick={()=> this.toggleTodo(item)}>
+                <td>{item.action}</td>
+               
+                <td>
+               
+                  <input type="checkbox" id={item.action} checked={item.done} onChange={()=> this.toggleTodo(item)}/>
+                  
+                </td>
+                
+       </tr> 
+               
+          
+     ) 
+/*
+     todoTableRowsV2 =() =>{
+       
+     
+     return this.state.todoItems.map((item) =>{
+       return (<tr key={item.action}>
+        <td>{item.action}</td>
+        <td>
+          <input type="checkbox" checked={item.done} onChange={()=> this.toggleTodo(item)}/>
+        </td>
+        </tr> )})
+        
+        
+   
+     }*/
+  
   render = () => {
   return (
     <div>
@@ -60,6 +98,17 @@ class App extends React.Component{
                  onClick={this.createNewTodo}>Add
                 </button>       
            </div>
+           <table className="table table-striped table-bordered">
+               <thead>
+                  <tr>
+                    <th>Description</th>
+                    <th>Done</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  {this.todoTableRows()}
+               </tbody>
+           </table>
       </div>
     </div>
   );

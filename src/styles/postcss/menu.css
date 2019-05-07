@@ -1,0 +1,70 @@
+
+header {
+    
+    background:rgb(145, 167, 167);
+
+    max-width:40%;
+    height: 100vh;
+}
+
+.Header_Content{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+.HeaderItem {
+    margin:0;
+    border-bottom: 1px solid peru;
+
+}
+
+.HeaderItem a{
+    background: pink;
+    text-decoration: none;
+    color:white;
+    display: block;
+    padding:5px;
+}
+
+figure {
+    height: 30%;
+    background:rgba(22, 2, 2, 0.8);
+    padding: 15px 15px;
+    margin:0;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+
+figure img{
+    border:2px solid gray;
+    border-radius: 50%;
+    width:60px;
+    margin-right:20px;
+    margin-bottom: 5px; 
+    
+    background: blue;
+   
+}
+
+figure figcaption{
+    color: white;
+    align-self: center;
+    font-weight: bold;
+
+}
+
+figure figcaption p{
+    margin:0;
+    line-height: 16px;
+}
+
+.Header_Tipo{
+    font-size:11px;
+    font-weight: normal;
+    text-align: right;
+    color:orangered;
+}
