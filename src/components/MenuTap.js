@@ -9,7 +9,7 @@ class MenuTap extends Component {
    render(){
        return (<Fragment>
                  <header className="MenuTap">
-                     <figure>
+                     <figure className="MenuTapItem_figure">
                          <img src="https://www.gravatar.com/avatar/2ff51774d8934463b512346777cce77b?s=100" alt="logo  "></img>
                          <figcaption>
                              <p>Fabio Rojas</p>

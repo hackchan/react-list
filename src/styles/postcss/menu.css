@@ -59,7 +59,7 @@
     box-shadow:0px 12px 1px -12px rgba(149,202,62,1);
 }
 
-figure {
+.MenuTapItem_figure {
     
     height: 30%;
     
@@ -77,7 +77,7 @@ figure {
    
 }
 
-figure img{
+.MenuTapItem_figure img{
     border:2px dotted  rgba(149,202,62,.5);
     border-radius: 50%;
     width:60px;
@@ -90,7 +90,7 @@ figure img{
    
 }
 
-figure img:hover{
+.MenuTapItem_figure img:hover{
     
     transform: rotate(360deg);
 }
